@@ -4,11 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>LaraLink</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
         <!-- Styles -->
         <style>
             html, body {
@@ -68,7 +67,9 @@
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth
+                    <a href="{{ url('/submit') }}">Submit Link</a>
                     <a href="{{ url('/home') }}">Home</a>
+
                 @else
                     <a href="{{ route('login') }}">Login</a>
                     <a href="{{ route('register') }}">Register</a>
@@ -78,7 +79,7 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Laravel
+                LaraLink
             </div>
 
             <div class="links">

@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
-        <div class="row">
+    <div class="container-lg">
+        <div class="card-group justify-content-center">
             <h1>Submit a link</h1>
         </div>
-        <div class="row">
+
+        <div class="card-body">
             <form action="/submit" method="post">
                 @csrf
                 @if ($errors->any())
@@ -28,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" placeholder="description">{{ old('description') }}</textarea>
+                    <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" placeholder="Description">{{ old('description') }}</textarea>
                     @error('description')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
